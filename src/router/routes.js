@@ -3,9 +3,6 @@ const routes = [
   {
     path: '/',
     component: () => import('pages/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
-    ]
   },
 
   // Always leave this as last one,

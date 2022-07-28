@@ -1,49 +1,41 @@
 <template>
-  <q-item
-    clickable
-    tag="a"
-    target="_blank"
-    :href="link"
-  >
-    <q-item-section
-      v-if="icon"
-      avatar
-    >
-      <q-icon :name="icon" />
-    </q-item-section>
-
-    <q-item-section>
-      <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>{{ caption }}</q-item-label>
-    </q-item-section>
-  </q-item>
+	 <q-item clickable @click="inScroll()">
+		  <q-item-section v-if="icon" avatar>
+				<q-icon :name="icon" />
+		  </q-item-section>
+		  <q-item-section>
+				<q-item-label>{{ title }}</q-item-label>
+		  </q-item-section>
+	 </q-item>
 </template>
+<script setup>
+import {defineProps} from 'vue'
+import {scroll} from 'quasar'
 
-<script>
-import { defineComponent } from 'vue'
+const {
+    getScrollTarget,
+    setVerticalScrollPosition
+} = scroll
 
-export default defineComponent({
-  name: 'EssentialLink',
-  props: {
+const props = defineProps({
     title: {
-      type: String,
-      required: true
+        type: String,
+        required: true
     },
-
-    caption: {
-      type: String,
-      default: ''
-    },
-
-    link: {
-      type: String,
-      default: '#'
-    },
-
     icon: {
-      type: String,
-      default: ''
+        type: String,
+        default: ''
+    },
+    id: {
+        type: String,
     }
-  }
 })
+
+function inScroll() {
+    const el = document.getElementById(props.id);
+    const target = getScrollTarget(el)
+    const offset = el.offsetTop
+    const duration = 1000
+    setVerticalScrollPosition(target, offset, duration);
+}
 </script>
