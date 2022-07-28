@@ -1,6 +1,6 @@
 <template>
-	 <div class="q-py-lg">
-		  <div class="col text-h4 text-center text-md-left q-pb-lg">
+	 <div class="q-py-xl">
+		  <div class="col text-h4 q-pb-xl" :class="$q.screen.gt.md ? 'text-left':'text-center'">
 				{{ $t("talk") }}
 		  </div>
 		  <div class="text-center">
@@ -21,7 +21,6 @@
 								</q-form>
 						  </q-card>
 					 </div>
-					 <div class="hidden-sm-and-up" />
 				</div>
 		  </div>
 	 </div>

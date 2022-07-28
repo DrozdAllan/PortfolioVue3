@@ -1,16 +1,21 @@
 <template>
-	 <div class="q-pa-md">
-		  <q-card class="bg-primary">
-				<q-tabs v-model="tab" dense class="text-white" active-color="white" indicator-color="white" align="justify"
-						  narrow-indicator>
-					 <q-tab v-for="panel in panels" :name="panel.name" :label="panel.name" />
-				</q-tabs>
-				<q-separator />
-				<q-tab-panels v-model="tab" animated class="bg-primary text-white">
-					 <panel-de-ouf v-for="panel in panels" :name="panel.name" :text="panel.text" :link="panel.link"
-										:images="panel.images" />
-				</q-tab-panels>
-		  </q-card>
+	 <div class="q-py-xl">
+		  <div class="col text-h4 q-pb-xl" :class="$q.screen.gt.md ? 'text-left':'text-center'">
+				{{ $t("done") }}
+		  </div>
+		  <div class="q-pa-md">
+				<q-card class="bg-primary">
+					 <q-tabs v-model="tab" dense class="text-white" active-color="white" indicator-color="white"
+								align="justify" narrow-indicator>
+						  <q-tab v-for="panel in panels" :name="panel.name" :label="panel.name" />
+					 </q-tabs>
+					 <q-separator />
+					 <q-tab-panels v-model="tab" animated class="bg-primary text-white">
+						  <panel-de-ouf v-for="panel in panels" :name="panel.name" :text="panel.text" :link="panel.link"
+											 :images="panel.images" />
+					 </q-tab-panels>
+				</q-card>
+		  </div>
 	 </div>
 </template>
 <script setup>

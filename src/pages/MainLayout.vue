@@ -2,9 +2,17 @@
 	 <q-layout view="lHh Lpr lFf">
 		  <q-drawer v-model="leftDrawerOpen" show-if-above :width="256" style="background-color: #507c54">
 				<q-list class="drawerStyle">
-					 <q-item-label header class="text-white">
-						  Essential Links
+					 <q-item-label header class="text-white text-center text-h4">
+						  <q-img src="PortfolioLogoInkFree.png" width="90px" /> <br>
+						  <span class="text-h4">
+						  Allan Drozd <br>
+						  </span> <span class="text-h5">
+						  {{ $t("title") }}
+						  </span>
 					 </q-item-label>
+					 
+					 <q-separator color="white" />
+
 					 <EssentialLink v-for="section in sections" :title="section.title" :icon="section.icon"
 										 :id="section.id" />
 					 <div class="row justify-around">
@@ -33,7 +41,7 @@
 </template>
 <script setup>
 import {ref} from 'vue'
-import { useI18n } from 'vue-i18n'
+import {useI18n} from 'vue-i18n'
 import EssentialLink from 'components/EssentialLink.vue'
 import Services from "./Services.vue";
 import About from './About.vue';
@@ -77,5 +85,6 @@ const sections = [{
 .other-hero {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0)), url('annie-spratt-KDVo3qepq3I-unsplash-min.jpg');
     background-size: cover;
+	 padding: 30px;
 }
 </style>

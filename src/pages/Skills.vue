@@ -1,11 +1,17 @@
 <template>
-	 <div class="py-14">
-		  <div class="col text-h4 text-center text-md-left pb-16">
+	 <div class="q-py-xl">
+		  <div class="col text-h4 q-pb-xl" :class="$q.screen.gt.md ? 'text-left':'text-center'">
 				{{ $t("know") }}
 		  </div>
 		  <div>
-				<span class="text-h6 font-weight-bold">{{ $t("prog") }}</span>
-				<div class="row q-py-lg justify-center">
+				<span class="text-h6 text-bold">{{ $t("prog") }}</span>
+				<div class="row q-py-lg justify-around">
+					 <div v-for="icon in icons" class="col-1">
+						  <IconDeOuf :title="icon.title" :filename="icon.filename" />
+					 </div>
+				</div>
+				<span class="text-h6 text-bold">{{ $t("design") }}</span>
+				<div class="row q-py-lg justify-around">
 					 <div v-for="icon in icons" class="col-1">
 						  <IconDeOuf :title="icon.title" :filename="icon.filename" />
 					 </div>
