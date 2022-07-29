@@ -11,10 +11,10 @@
 						  </span>
 					 </q-item-label>
 					 
-					 <q-separator color="white" />
+					 <q-separator color="#dce5da" />
 
 					 <EssentialLink v-for="section in sections" :title="section.title" :icon="section.icon"
-										 :id="section.id" />
+										 :id="section.id" @click-event="clickCallback()" />
 					 <div class="row justify-around">
 						  <q-icon name="img:icons/united-kingdom.png" size="40px" @click="$root.$i18n.locale = 'en-US'" />
 						  <q-icon name="img:icons/france.png" size="40px" @click="$root.$i18n.locale = 'fr-FR'" />
@@ -33,7 +33,7 @@
 						  </div>
 					 </q-page>
 					 <q-page-sticky position="bottom-left" :offset="[18, 68]">
-						  <q-btn fab color="primary" icon="menu" @click="toggleLeftDrawer" id="zinzin" class="lt-md" />
+						  <q-btn fab color="primary" icon="menu" @click="toggleLeftDrawer" class="lt-md" />
 					 </q-page-sticky>
 				</q-page>
 		  </q-page-container>
@@ -42,6 +42,7 @@
 <script setup>
 import {ref} from 'vue'
 import {useI18n} from 'vue-i18n'
+import {useQuasar} from "quasar";
 import EssentialLink from 'components/EssentialLink.vue'
 import Services from "./Services.vue";
 import About from './About.vue';
@@ -50,30 +51,37 @@ import Portfolio from "./Portfolio.vue";
 import Contact from "./Contact.vue";
 
 const leftDrawerOpen = ref(false)
+const $q = useQuasar();
 
 function toggleLeftDrawer() {
     leftDrawerOpen.value = !leftDrawerOpen.value
 }
 
+function clickCallback() {
+    if ($q.screen.lt.md) {
+        leftDrawerOpen.value = false;
+    }
+}
+
 const sections = [{
     title: 'About Me',
-    icon: 'school',
+    icon: 'cyclone',
     id: 'about',
 }, {
     title: 'Services',
-    icon: 'code',
+    icon: 'build',
     id: 'services',
 }, {
     title: 'Skills',
-    icon: 'chat',
+    icon: 'code',
     id: 'skills',
 }, {
     title: 'Portfolio',
-    icon: 'record_voice_over',
+    icon: 'work_history',
     id: 'portfolio',
 }, {
     title: 'Contact',
-    icon: 'rss_feed',
+    icon: 'mail',
     id: 'contact',
 }]
 </script>
@@ -85,6 +93,6 @@ const sections = [{
 .other-hero {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0)), url('annie-spratt-KDVo3qepq3I-unsplash-min.jpg');
     background-size: cover;
-	 padding: 30px;
+	 padding: 10px;
 }
 </style>

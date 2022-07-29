@@ -2,8 +2,7 @@
 // so you can safely delete all default props below
 
 export default {
-    failed: 'Action failed',
-    success: 'Action was successful',
+    available: "Available here",
     title: "Developer",
     about: "About Me",
     skills: "Skills",
@@ -33,15 +32,15 @@ export default {
     mailRule: "Mail required",
     mailRule2: "Invalid mail format",
     messageRule: "Message required",
-    mynextgame: "My Next Game is an Android app where the user can get a videogame title and cover either by answering 4 questions or by complete randomization. It is made with Flutter and Firebase for the database. I went for a fun design with a cheerful tone for logo and colors. For a quick peek see ",
+    mynextgame: "My Next Game is an Android app where the user can get a videogame title and cover either by answering 4 questions or by complete randomization. It is made with Flutter and Firebase for the database. I went for a fun design with a cheerful tone for logo and colors.",
     appLink: "and for the Google Play Store see ",
-    lanya: "Lanya is a website based on a typical e-shop layout, using Firebase and Stripe, combined with Vue 2 and Vuetify to make a Single Page Application. Project available here :",
-    moviesTitle: "MoviesTitle is a project where I wanted to create an Api through ApiPlatform. Running on PHP 8 with Symfony served with Vue 2 + Vuetify on the front. Project available here (hosted on Heroku with free dyno so it takes some time to load) :",
-    multitasky: "Mültitaskÿ is a little project I did to test some Vuetify components and the Vue Leaflet module to manipulate maps. Available here : ",
+    lanya: "Lanya is a website based on a typical e-shop layout, using Firebase and Stripe, combined with Vue 2 and Vuetify to make a Single Page Application.",
+    moviesTitle: "MoviesTitle is a project where I wanted to create an Api through ApiPlatform. Running on PHP 8 with Symfony served with Vue 2 + Vuetify on the front (hosted on Heroku with free dyno so it takes some time to load) :",
+    multitasky: "Mültitaskÿ is a little project I did to test some Vuetify components and the Vue Leaflet module to manipulate maps.",
     fleeting: "Fleeting was my first big project. Registration verified by admin, profile search, 1 to 1 messaging, one time payment and subscription. Using only Symfony and the design was made with Bootstrap 4.6",
-    hackaton: "This little project was made for the Flutter Hackaton 2022. The goal was to reimagine the classic puzzle. Built with Flutter for web and available here : ",
-    larallo: "This project is a simple Chat App using the Pusher API, with a Laravel backend and a Vue 3 with Quasar frontend. It is available here (hosted on Heroku with free dyno so it takes some time to load) :",
-    movietitlesapi: "New version of my Movies Title project, this time I used Laravel as backend and Vue 3 for the frontend. Available here (hosted on Heroku with free dyno so it takes some time to load) :",
+    hackaton: "This little project was made for the Flutter Hackaton 2022. The goal was to reimagine the classic puzzle. Built with Flutter for web : ",
+    larallo: "This project is a simple Chat App using the Pusher API, with a Laravel backend and a Vue 3 with Quasar frontend (hosted on Heroku with free dyno so it takes some time to load) :",
+    movietitlesapi: "New version of my Movies Title project, this time I used Laravel as backend and Vue 3 for the frontend (hosted on Heroku with free dyno so it takes some time to load) :",
     blog: "Personal blog made with Wordpress 6.0 where I talk about video games :",
     chinesedome: "While learning chinese I decided to make an app about China, Laravel & Vue 3 (hosted on Heroku with free dyno so it takes some time to load) : "
 }

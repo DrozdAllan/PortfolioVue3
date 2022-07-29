@@ -3,7 +3,7 @@
 		  <div class="col text-h4 q-pb-xl" :class="$q.screen.gt.md ? 'text-left':'text-center'">
 				{{ $t("done") }}
 		  </div>
-		  <div class="q-pa-md">
+		  <div>
 				<q-card class="bg-primary">
 					 <q-tabs v-model="tab" dense active-color="white" indicator-color="white"
 								align="justify" narrow-indicator>

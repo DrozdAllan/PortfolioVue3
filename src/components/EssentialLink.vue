@@ -1,5 +1,5 @@
 <template>
-	 <q-item clickable @click="inScroll()">
+	 <q-item clickable @click="$emit('clickEvent');inScroll()">
 		  <q-item-section v-if="icon" avatar>
 				<q-icon :name="icon" />
 		  </q-item-section>

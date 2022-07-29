@@ -2,17 +2,18 @@
   "name": "portfolio-vue3",
   "version": "0.0.1",
   "description": "My Portfolio",
-  "productName": "Quasar App",
+  "productName": "Allan Drozd Developer",
   "author": "DrozdAllan <drozdallan@gmail.com>",
   "private": true,
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "vue-i18n": "^9.0.0",
     "@quasar/extras": "^1.0.0",
+    "firebase": "^9.9.1",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
+    "vue-i18n": "^9.0.0",
     "vue-router": "^4.0.0"
   },
   "devDependencies": {

@@ -1,18 +1,18 @@
 <template>
 	 <div class="q-py-xl">
-		  <div class="col text-h4 q-pb-xl" :class="$q.screen.gt.md ? 'text-left':'text-center'">
+		  <div class="text-h4 q-pb-xl" :class="$q.screen.gt.md ? 'text-left':'text-center'">
 				{{ $t("know") }}
 		  </div>
 		  <div>
-				<span class="text-h6 text-bold">{{ $t("prog") }}</span>
-				<div class="row q-py-lg justify-around">
-					 <div v-for="icon in icons" class="col-1">
+				<span class="q-pl-lg text-h6 text-bold">{{ $t("prog") }}</span>
+				<div class="row q-py-xl justify-around items-center">
+					 <div v-for="icon in iconsProg" class="col-3 col-md-2">
 						  <IconDeOuf :title="icon.title" :filename="icon.filename" />
 					 </div>
 				</div>
-				<span class="text-h6 text-bold">{{ $t("design") }}</span>
-				<div class="row q-py-lg justify-around">
-					 <div v-for="icon in icons" class="col-1">
+				<span class="q-px-lg text-h6 text-bold">{{ $t("design") }}</span>
+				<div class="row q-py-xl justify-around">
+					 <div v-for="icon in iconsDesign" class="col-3 col-md-2">
 						  <IconDeOuf :title="icon.title" :filename="icon.filename" />
 					 </div>
 				</div>
@@ -22,7 +22,7 @@
 <script setup>
 import IconDeOuf from '../components/IconDeOuf.vue'
 
-const icons = [{
+const iconsProg = [{
     title: 'Laravel',
     filename: 'laravel_128'
 }, {
@@ -49,5 +49,16 @@ const icons = [{
 }, {
     title: 'ApiPlatform',
     filename: 'apiPlatform_300'
+}];
+
+const iconsDesign = [{
+    title: 'Figma',
+    filename: 'figma_128'
+}, {
+    title: 'Gimp',
+    filename: 'gimp_128'
+}, {
+    title: 'Rive',
+    filename: 'rive_92'
 }]
 </script>
