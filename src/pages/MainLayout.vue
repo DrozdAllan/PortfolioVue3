@@ -2,7 +2,7 @@
 	 <q-layout view="lHh Lpr lFf">
 		  <q-drawer v-model="leftDrawerOpen" show-if-above :width="256" style="background-color: #507c54">
 				<q-list class="drawerStyle">
-					 <q-item-label header class="text-white text-center text-h4">
+					 <q-item-label class="text-center text-h4">
 						  <q-img src="PortfolioLogoInkFree.png" width="90px" /> <br>
 						  <span class="text-h4">
 						  Allan Drozd <br>
@@ -21,7 +21,7 @@
 					 </div>
 				</q-list>
 		  </q-drawer>
-		  <q-page-container class="text-white">
+		  <q-page-container>
 				<q-page>
 					 <q-page class="flex-column flex-center">
 						  <About id="about" />
@@ -79,7 +79,7 @@ const sections = [{
 </script>
 <style scoped>
 .drawerStyle {
-    color: aliceblue;
+    color: white;
 }
 
 .other-hero {

@@ -9,7 +9,6 @@
 	 </q-item>
 </template>
 <script setup>
-import {defineProps} from 'vue'
 import {scroll} from 'quasar'
 
 const {
